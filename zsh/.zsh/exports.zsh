@@ -2,6 +2,9 @@
 export GEM_HOME="$HOME/.gem"
 export EDITOR='nvim'
 
+# Dotfiles custom scripts
+export PATH="$PATH:$HOME/dotfiles/custom_scripts"
+
 # NPM
 export NPM_PACKAGES="$HOME/.npm-packages"
 export PATH="$PATH:$NPM_PACKAGES/bin"

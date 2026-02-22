@@ -4,6 +4,11 @@ alias job="cd ~/Documents/projects/applaudo/volaris_ios"
 # iOS / Tuist
 alias tg="tuist generate"
 
+# Cleanup
+recover() {
+  "$HOME/dotfiles/custom_scripts/recover-memory.sh" "$@"
+}
+
 # Seamless Navigation: Zsh -> Zellij -> Vim
 # NOTE: Ctrl+J is often 'Enter' in terminals. Be careful overriding it.
 # Ctrl+L is usually 'Clear Screen'.

@@ -16,8 +16,11 @@ fi
 
 # 1. Apply Base16 Shell Colors (Dracula)
 # This ensures Linux terminals match the Mac iTerm colors
-if [ -f "$HOME/.zsh/themes/dracula.sh" ]; then
-    source "$HOME/.zsh/themes/dracula.sh"
+# We use a check to ensure we are in an interactive shell to avoid errors in scripts
+if [[ -o interactive ]]; then
+    if [ -f "$HOME/.zsh/themes/dracula.sh" ]; then
+        source "$HOME/.zsh/themes/dracula.sh"
+    fi
 fi
 
 # 2. Starship Prompt (Disabled to prioritize RobbyRussell)
@@ -46,3 +49,13 @@ esac
 if command -v zoxide > /dev/null; then
   eval "$(zoxide init zsh)"
 fi
+
+# opencode
+export PATH=/Users/louis1001/.opencode/bin:$PATH
+
+# bun completions
+[ -s "/Users/louis1001/.bun/_bun" ] && source "/Users/louis1001/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

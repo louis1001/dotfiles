@@ -1,6 +1,7 @@
 return {
   {
     "CopilotC-Nvim/CopilotChat.nvim",
+    enabled = false,
     branch = "canary", -- CopilotChat often pushes fixes to canary branch first
     dependencies = {
       { "nvim-lua/plenary.nvim" }, -- For file utilities

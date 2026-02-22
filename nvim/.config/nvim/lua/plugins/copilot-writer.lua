@@ -1,5 +1,6 @@
 return {
   -- 1. COILOT ENGINE (Restored to default behavior)
+  enabled = false,
   {
     "zbirenbaum/copilot.lua",
     opts = {
