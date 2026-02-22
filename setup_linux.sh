@@ -119,11 +119,16 @@ echo "🔗 Linking Configs with Stow..."
 mkdir -p "$DOTFILES_DIR/zsh/.zsh"
 mkdir -p "$DOTFILES_DIR/nvim/.config"
 mkdir -p "$DOTFILES_DIR/zellij/.config"
+mkdir -p "$DOTFILES_DIR/mise/.config"
+mkdir -p "$DOTFILES_DIR/gemini"
 
 cd "$DOTFILES_DIR"
 stow -v -R zsh
 stow -v -R nvim
 stow -v -R zellij
+stow -v -R mise
+stow -v -R gemini
+stow -v -R custom_scripts
 
 # 8. Change Shell
 if [ "$SHELL" != "$(which zsh)" ]; then

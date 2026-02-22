@@ -140,6 +140,7 @@ stow -v -R zsh
 stow -v -R nvim
 stow -v -R zellij
 stow -v -R mise
+stow -v -R gemini
 stow -v -R custom_scripts
 
 echo "🎉 Migration Complete!"
